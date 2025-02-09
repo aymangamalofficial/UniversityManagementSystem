@@ -15,7 +15,7 @@ class EmailController extends Controller
             'code' => '751845'
         ];
 
-        Mail::to('8765bot@gmail.com')->send(new SimpleEmail($details));
+        Mail::to('aymangamalofficial@gmail.com')->send(new SimpleEmail($details));
 
         return 'Email sent successfully!';
     }
