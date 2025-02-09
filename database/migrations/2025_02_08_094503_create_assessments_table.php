@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('assessments', function (Blueprint $table) {
             $table->id('assessment_id');
-            $table->foreignId('course_id')->constrained('courses')->onDelete('cascade');
+            $table->foreignId('course_id');
             $table->string('assessment_name');
             $table->string('type');
-            $table->decimal('max_score', 8, 2);
+            $table->decimal('max_score');
             $table->dateTime('deadline');
             $table->timestamps();
         });

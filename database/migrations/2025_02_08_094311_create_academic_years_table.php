@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('academic_years', function (Blueprint $table) {
             $table->id('academic_year_id');
-            $table->foreign('department_id',1);
+            $table->foreignId('department_id');
             $table->string('year_name')->unique();
             $table->date('start_date');
             $table->date('end_date');

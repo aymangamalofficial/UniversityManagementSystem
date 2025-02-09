@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('qrcode', function (Blueprint $table) {
             $table->id('qr_code_id');
-            $table->foreignId('course_id')->constrained('courses')->onDelete('cascade');
-            $table->foreignId('generated_by')->constrained('instructors')->onDelete('cascade');
+            $table->foreignId('course_id');
+            $table->foreignId('generated_by');
             $table->string('qr_code_value')->unique();
             $table->dateTime('expiry_time');
             $table->string('session_type');

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Grade extends Model
 {
-    use HasFactory;
+    // use HasFactory;
 
     protected $primaryKey = 'grade_id';
     protected $fillable = ['student_id', 'course_id', 'assessment_id', 'obtained_score'];

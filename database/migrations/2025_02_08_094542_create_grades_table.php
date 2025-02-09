@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('grades', function (Blueprint $table) {
             $table->id('grade_id');
             $table->foreignId('student_id');
-            $table->foreignId('course_id')->constrained('courses')->onDelete('cascade');
-            $table->foreignId('assessment_id')->constrained('assessments')->onDelete('cascade');
-            $table->decimal('obtained_score', 8, 2);
+            $table->foreignId('course_id');
+            $table->foreignId('assessment_id');
+            $table->decimal('obtained_score');
             $table->timestamps();
         });
     }

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Instructor extends Model
 {
-    use HasFactory;
+    // use HasFactory;
 
     protected $primaryKey = 'instructor_id';
     protected $fillable = ['name', 'email', 'password', 'phone_number', 'role_id'];

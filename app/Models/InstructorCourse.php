@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class InstructorCourse extends Model
 {
-    use HasFactory;
+    // use HasFactory;
 
     protected $primaryKey = null;
     public $incrementing = false;

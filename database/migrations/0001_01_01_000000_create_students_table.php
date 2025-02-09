@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->string('national_id',14)->unique();
-            // $table->string('phone_number',11);
-            $table->int('year',1);
-            $table->foreign('department_id',1)->constrained()->cascadeOnDelete();
+            $table->tinyInteger('year'); // تم تعديل int إلى tinyInteger
+            $table->unsignedBigInteger('department_id'); // تم تعديل المفتاح الأجنبي
+            $table->foreign('department_id')->references('department_id')->on('departments')->onDelete('cascade');
             $table->timestamps();
         });
 
