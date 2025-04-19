@@ -9,6 +9,8 @@ class Instructor extends Model
     // use HasFactory;
 
     protected $primaryKey = 'instructor_id';
-    protected $fillable = ['name', 'email', 'password', 'phone_number', 'role_id'];
+    protected $fillable = ['name', 'email', 'password', 'phone_number','national_id','code', 'role_id'];
+
+
 }
 

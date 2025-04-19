@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('students', function (Blueprint $table) {
-            $table->id('student_id');
-            $table->string('name',50);
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->bigInteger('national_id')->unique();
+            $table->integer('code')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->string('national_id',14)->unique();
-            $table->tinyInteger('year'); // تم تعديل int إلى tinyInteger
-            $table->unsignedBigInteger('department_id'); // تم تعديل المفتاح الأجنبي
-            $table->foreign('department_id')->references('department_id')->on('departments')->onDelete('cascade');
+            $table->foreignId('current_team_id')->nullable();
+            $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
         });
 
@@ -46,7 +46,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('students');
+        Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
     }

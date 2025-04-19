@@ -10,7 +10,7 @@ class EmailController extends Controller
     public function sendEmail()
     {
         $details = [
-            'name' => 'محمود محمود',
+            'name' => 'ميدو',
             'message' => 'هذه رسالة تجريبية',
             'code' => '751845'
         ];

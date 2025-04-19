@@ -14,7 +14,9 @@ class Course extends Model
         'course_name',
         'credit_hours',
         'semester_id',
-        'department_id'
+        'department_id',
+        'doctor_id',
+        'assistant_id',
     ];
 
     protected function casts(): array
@@ -25,9 +27,13 @@ class Course extends Model
         ];
     }
 
-
-    public function semester()
+    public function department()
     {
-        return $this->belongsTo(Semester::class, 'semester_id');
+        return $this->belongsTo(Department::class, 'department_id');
     }
+
+    // public function semester()
+    // {
+    //     return $this->belongsTo(Semester::class, 'semester_id');
+    // }
 }

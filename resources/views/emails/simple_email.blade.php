@@ -131,10 +131,10 @@
     <div class="email-container">
         <div class="header">رسالة هامة</div>
         <div class="content">
-            <p>مرحبًا،</p>
-            <p>هذه رسالة تحتوي على كود مميز لك:</p>
+            <p>مرحبًا،{{ $details['name'] }}</p>
+            <p>{{ $details['message'] }}</p>
             <div class="code-box">
-                <code>1234-5678-ABCD-EFGH</code>
+                <code>{{ $details['code'] }}</code>
             </div>
             <p>يرجى استخدام هذا الكود للوصول إلى الخدمة الخاصة بك.</p>
         </div>

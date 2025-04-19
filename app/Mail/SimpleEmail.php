@@ -30,7 +30,7 @@ class SimpleEmail extends Mailable
      */
     public function build()
     {
-        return $this->subject('رمز التحقق من البريد الإلكتروني')
+        return $this->subject('تجربة: التحقق من البريد الإلكتروني')
                     ->view('emails.simple_email');
     }
 }
